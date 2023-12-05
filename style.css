@@ -1,0 +1,459 @@
+/*-------------------- 
+**   RESET ---------*/
+/* This reset is a copied from Andy Bell reset css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*--------------------------
+** DELCARE VARIABLES ------*/
+:root {
+  --btn: #3EE9E5;
+  --btn-hover: #080C20;
+  --btn-background: #093F68;
+  --text-1: #FFFFFF;
+  --text-2: #777F98;
+  --text-error: #FF2965;
+
+  --ff: 'Manrope', sans-serif;
+
+  --fw-bold: 800;
+  --fw-normal: 500;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff);
+  text-align: center;
+
+  padding: 2.5rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9rem;
+
+  background-color: var(--btn-hover);
+  background-image: url(./assets/illustration-hero-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 450px;
+  background-position: 50% 8rem;
+}
+
+h1, h2, h3, .price, form {
+  font-weight: var(--fw-bold);
+  color: var(--text-1)
+}
+
+h2, h3 {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: var(--fw-normal);
+  line-height: 1.5625rem;
+  color: var(--text-2);
+}
+
+/*--------------- 
+** LAYOUT DESIGN */
+
+header {
+  margin-bottom: 12.625rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h1 span {
+  color: var(--btn);
+}
+
+.scroll {
+  margin-top: .5rem;
+  align-self: center;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.highlight li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.decoration {
+  background-color: var(--btn-background);
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.highlight-text p {
+  margin-top: 1rem;
+}  
+
+.pricing-plan-container {
+  display: flex; 
+  flex-direction: column;
+  gap: 1.6875rem;
+}
+
+.pricing-plan-container h2 {
+  font-size: 1.5rem;
+}
+
+.pricing-plan-item {
+  padding: 3.0625rem 1.875rem;
+  border-radius: .75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+
+  position: relative;
+}
+
+.price {
+  font-size: 2.5rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pricing-plan-item > img {
+  position: absolute;
+  top: -1.9rem;
+}
+
+.item-1 {
+  background-color: var(--btn-background);
+  margin-top: 3.25rem;
+  margin-bottom: 4.0625rem;
+}
+
+.item-1 * {
+  color: var(--text-1);
+}
+
+.item-1 > .text {
+  opacity: .5973;;
+}
+
+.item-1 svg path {
+  fill: var(--btn);
+}
+
+.item-2 {
+  background-color: var(--btn);
+}
+
+.item-2 * {
+  color: var(--btn-hover);
+}
+
+.item-2 > .text, .item-2 span {
+  opacity: .6;
+}
+
+.item-2 .price {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-bottom: .4374rem;
+}
+
+input, button {
+  border-radius: 1.5rem;
+  border-color: transparent;
+}
+
+input {
+  padding: .75rem 1.125rem;
+  background-color: var(--btn-background);
+  color: var(--text-1);
+}
+
+input::placeholder {
+  color: var(--text-1);
+  opacity: .4;
+}
+
+input:focus {
+  border: .2rem solid var(--btn);
+  opacity: 1;
+}
+
+button {
+  padding: .75rem 2.625rem;
+  background-color: var(--btn);
+  color: var(--btn-background);
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  border: .2rem solid var(--btn);
+  color: var(--text-1);
+  cursor: pointer;
+}
+
+footer a {
+  color: var(--btn);
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding: 3rem 2.4375rem;
+    gap: 8rem;
+
+    background-image: url('./assets/illustration-hero-left.svg'), url('./assets/bg-hero-squiggle.svg'), url('./assets/illustration-hero-right.svg'), url('./assets/bg-footer-squiggle.svg');
+    background-size: 300px, 450px, 300px, contain;
+    background-position: -38% 9rem, 50% 10rem, 135% 9rem, 0 92%;
+  }
+
+  header {
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  main {
+    padding: 0 3.625rem;
+  }
+
+  .intro {
+    padding: 0 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    padding: 0 4rem;
+  }
+
+  .highlight  li{
+    flex-direction: row;
+    text-align: left;
+    gap: 3.4375rem;
+  }
+
+  .highlight li:nth-child(2n+1) {
+    margin-left: 3.625rem;
+  }
+
+  .pricing-plan-item {
+    margin-left: 4.125rem;
+    margin-right: 4.125rem;
+  }
+
+  form {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  label {
+    flex-basis: 100%;
+  }
+
+  input {
+    flex-basis: 60%;
+  }
+
+  @media (min-width: 90rem) {
+    body {
+      padding: 5.0625rem 10.3125rem;
+      gap: 11.5625rem;
+    }
+
+    .intro {
+      margin-bottom: 8rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      padding: 0 10rem;
+    }
+
+    .intro p {
+      padding: 0 9rem;
+    }
+
+    main {
+      padding: 0;
+    }
+
+    .highlight {
+      flex-direction: row;
+      gap: 2%;
+      justify-content: space-between;
+    }
+
+    .highlight li {
+      flex-basis: 22.5%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .highlight li:nth-child(2n+1) {
+      margin-left: 0;
+    }
+
+    .highlight li:nth-child(2n) {
+      margin-top: 3rem;
+    }
+
+    .pricing-plan-container {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    .pricing-plan-container h2 {
+      flex-basis: 100%;
+      font-size: 2rem;
+    }
+
+    .pricing-plan-container > p {
+      flex-basis: 100%;
+      padding: 0 15rem;
+      margin-bottom: 7.3125rem;
+    }
+
+    .pricing-plan-item {
+      margin: 0;
+      flex-basis: 40%;
+    }
+
+    .item-1 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-size: 2rem;
+    }
+
+    input {
+      flex-basis: 30%;
+    }
+  }
+}
+
+
+
+
