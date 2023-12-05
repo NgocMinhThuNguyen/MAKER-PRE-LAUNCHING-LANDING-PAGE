@@ -4,51 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Maker pre-launch landing page</title>
 </head>
 <body>
-  Get paid for the work you love to do.
+  <header>
+    <a href="#" aria-label="Maker - Home">
+      <img src="./assets/logo.svg" alt="Maker">
+    </a>
+  </header>
 
-  The 9-5 grind is so last century. We believe in living life on your 
-  own terms. Whether you’re looking to escape the rat race or set up 
-  a side hustle, we’ve got you covered.
+  <main>
+    <section class="intro flex flex-column">
+      <h1>Get paid for the work you <span class="intro-span">love</span> to do.</h1>
+      <p class="text">
+        The 9-5 grind is so last century. We believe in living life on your 
+        own terms. Whether you’re looking to escape the rat race or set up 
+        a side hustle, we’ve got you covered.
+      </p>
+      <img src="./assets/icon-scroll.svg" alt="" class="scroll">
+    </section>
 
-  Indulge your passions
-  Your passions shouldn't be just for the weekend. Earn a living doing what you love.
+    <ul role="list" class="highlight flex flex-column">
+      <li>
+        <div class="decoration">
+          <img src="./assets/illustration-passions.svg" alt="">
+        </div>
+    
+        <div class="highlight-text">
+          <h2>Indulge your passions</h2>
+          <p class="text">Your passions shouldn't be just for the weekend. Earn a living doing what you love.</p>
+        </div>
+      </li>
 
-  Gain financial freedom
-  Start making money work for you. There’s nothing quite like earning while you sleep. 
+      <li>
+        <div class="decoration">
+          <img src="./assets/illustration-financial-freedom.svg" alt="">
+        </div>
+        
+        <div class="highlight-text">
+          <h2>Gain financial freedom</h2>
+          <p class="text">Start making money work for you. There’s nothing quite like earning while you sleep.</p>
+        </div>
+      </li>
 
-  Choose your lifestyle
-  Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.
+      <li>
+        <div class="decoration">
+          <img src="./assets/illustration-lifestyle.svg" alt="">
+        </div>
+        
+        <div class="highlight-text">
+          <h2>Choose your lifestyle</h2>
+          <p class="text">Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.</p>
+        </div>
+      </li>
 
-  Work from anywhere
-  Selling online means not being pinned down. Want to work AND travel? Go for it!
+      <li>
+        <div class="decoration">
+          <img src="./assets/illustration-work-anywhere.svg" alt="">
+        </div>
+        
+        <div class="highlight-text">
+          <h2>Work from anywhere</h2>
+          <p class="text">Selling online means not being pinned down. Want to work AND travel? Go for it!</p>
+        </div>
+      </li>
+    </ul>
 
-  Our pricing plans
-  We only make money when our creators make money. Our plans are always affordable, and 
-  it’s completely free to get started.
+    <section class="pricing-plan-container">
+      <h2>Our pricing plans</h2>
+      <p class="text">
+        We only make money when our creators make money. Our plans are always affordable, and 
+        it’s completely free to get started.
+      </p>
 
-  Dip your toe
-  Just getting started? No problem at all! Our free plan will take you a long way.
-  Free
-  Unlimited products
-  Basic analytics
-  Limited marketplace exposure
-  10% fee per transaction
+      <section class="pricing-plan-item item-1">
+        <img src="./assets/icon-free.svg" alt="">
+        <h3>Dip your toe</h3>
+        <p class="text">Just getting started? No problem at all! Our free plan will take you a long way.</p>
+        <p class="price">Free</p>
+        <ul role="list" class="benefits-container">
+          <li class="benefit">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>
+            <p class="text">Unlimited products</p>
+          </li>
+          <li class="benefit">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>
+            <p class="text">Basic analytics</p>
+          </li>
+          <li class="benefit">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>
+            <p class="text">Limited marketplace exposure</p>
+          </li>
+          <li class="benefit">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>
+            <p class="text">10% fee per transaction</p>
+          </li>
+        </ul>
+      </section>
 
-  Dive right in
-  Ready for the big time? Our paid plan will help you take your business to the next level.
-  $25.00 /month
-  Custom domain
-  Advanced analytics and reports
-  High marketplace visibility
-  5% fee per transaction
+      <section class="pricing-plan-item item-2">
+        <img src="./assets/icon-paid.svg" alt="">
+        <h3>Dive right in</h3>
+        <p class="text">Ready for the big time? Our paid plan will help you take your business to the next level.</p>
+        <p class="price">$25.00 <span class="text">/ month</span></p>
+        <ul role="list" class="benefits-container">
+          <li class="benefit">
+            <img src="./assets/icon-check.svg" alt="">
+            <p class="text">Custom domain</p>
+          </li>
+          <li class="benefit">
+            <img src="./assets/icon-check.svg" alt="">
+            <p class="text">Advanced analytics and reports</p>
+          </li>
+          <li class="benefit">
+            <img src="./assets/icon-check.svg" alt="">
+            <p class="text">High marketplace visibility</p>
+          </li>
+          <li class="benefit">
+            <img src="./assets/icon-check.svg" alt="">
+            <p class="text">5% fee per transaction</p>
+          </li>
+        </ul>
+      </section>
+    </section>
 
-  Get notified when we launch
-  Email address
-  Get notified
+    <form action="#">
+      <label for="email-address">Get notified when we launch</label>
+      <input type="email" id="email-address" name="email-address" placeholder="Email address">
+      <button type="submit">Get notified</button>
+    </form>
+  </main>
+
+  <footer>
+    <p class="text attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text2">Frontend Mentor</a>. Coded by <a href="https://github.com/NgocMinhThuNguyen" class="text2">Thu Nguyen</a>.</p>
+  </footer>
 </body>
 </html>
