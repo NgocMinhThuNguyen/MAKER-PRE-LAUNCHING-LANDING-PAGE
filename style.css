@@ -103,6 +103,14 @@ select {
   --fw-normal: 500;
 }
 
+body, main, .flex {
+  display: flex;
+}
+
+body, main, .flex-column {
+  flex-direction: column;
+}
+
 body {
   min-height: 100vh;
   font-family: var(--ff);
@@ -110,8 +118,6 @@ body {
 
   padding: 2.5rem 1.5rem;
 
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 9rem;
@@ -148,14 +154,10 @@ header {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   gap: 9rem;
 }
 
 .intro {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -174,14 +176,10 @@ h1 span {
 }
 
 .highlight {
-  display: flex;
-  flex-direction: column;
   gap: 3.5rem;
 }
 
 .highlight li {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
@@ -197,8 +195,6 @@ h1 span {
 }  
 
 .pricing-plan-container {
-  display: flex; 
-  flex-direction: column;
   gap: 1.6875rem;
 }
 
@@ -210,8 +206,6 @@ h1 span {
   padding: 3.0625rem 1.875rem;
   border-radius: .75rem;
 
-  display: flex;
-  flex-direction: column;
   gap: 1.25rem;
   text-align: left;
 
@@ -223,7 +217,6 @@ h1 span {
 }
 
 .benefit {
-  display: flex;
   align-items: center;
   gap: 1rem;
 }
@@ -264,7 +257,6 @@ h1 span {
 }
 
 .item-2 .price {
-  display: flex;
   align-items: center;
   gap: .5rem;
 }
