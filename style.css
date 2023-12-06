@@ -270,14 +270,14 @@ h1 span {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-column: 1fr;
+  row-gap: .4374rem;
 }
 
 label {
   font-size: 1.5rem;
-  margin-bottom: .4374rem;
+  grid-row: 1/2;
 }
 
 input, button {
@@ -288,7 +288,9 @@ input, button {
 input {
   padding: .75rem 1.125rem;
   background-color: var(--btn-background);
+  border: .2rem solid transparent;
   color: var(--text-1);
+  grid-row: 2/3;
 }
 
 input::placeholder {
@@ -297,7 +299,7 @@ input::placeholder {
 }
 
 input:focus {
-  border: .2rem solid var(--btn);
+  border-color: var(--btn);
   opacity: 1;
 }
 
@@ -305,6 +307,7 @@ button {
   padding: .75rem 2.625rem;
   background-color: var(--btn);
   color: var(--btn-background);
+  grid-row: 4/5;
 }
 
 button:hover {
@@ -312,6 +315,22 @@ button:hover {
   border: .2rem solid var(--btn);
   color: var(--text-1);
   cursor: pointer;
+}
+
+form p {
+  text-align: left;
+  padding-left: 1.3rem;
+  grid-row: 3/4;
+  visibility: hidden;
+}
+
+input.error, input.error:focus {
+  border-color: var(--text-error);
+}
+
+p.error {
+  color: var(--text-error);
+  visibility: visible;
 }
 
 footer a {
@@ -325,7 +344,7 @@ footer a {
 
     background-image: url('./assets/illustration-hero-left.svg'), url('./assets/bg-hero-squiggle.svg'), url('./assets/illustration-hero-right.svg'), url('./assets/bg-footer-squiggle.svg');
     background-size: 300px, 450px, 300px, contain;
-    background-position: -38% 9rem, 50% 10rem, 135% 9rem, 0 92%;
+    background-position: left -10rem top 9rem, left 50% top 10rem, right -10rem top 9rem, left 0 bottom 8%;
   }
 
   header {
@@ -362,95 +381,108 @@ footer a {
   }
 
   form {
-    flex-flow: row wrap;
+    grid-template-columns: repeat(3,190px);
+    column-gap: .5rem;
     justify-content: center;
   }
 
   label {
-    flex-basis: 100%;
+    grid-column: 1/4;
+    grid-row: 1/2;
   }
 
   input {
-    flex-basis: 60%;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    align-self: stretch;
   }
 
-  @media (min-width: 90rem) {
-    body {
-      padding: 5.0625rem 10.3125rem;
-      gap: 11.5625rem;
-    }
+  button {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
 
-    .intro {
-      margin-bottom: 8rem;
-    }
+  form p {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    padding-left: 1.125rem;
+  }
+}
 
-    h1 {
-      font-size: 3rem;
-      line-height: 3.5rem;
-      padding: 0 10rem;
-    }
+@media (min-width: 90rem) {
+  body {
+    padding: 5.0625rem 10.3125rem;
+    gap: 11.5625rem;
 
-    .intro p {
-      padding: 0 9rem;
-    }
+    background-position: left -1rem top 9rem, left 50% top 10rem, right -3rem top 9rem, left 0 bottom 8%;
+  }
 
-    main {
-      padding: 0;
-    }
+  .intro {
+    margin-bottom: 8rem;
+  }
 
-    .highlight {
-      flex-direction: row;
-      gap: 2%;
-      justify-content: space-between;
-    }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding: 0 10rem;
+  }
 
-    .highlight li {
-      flex-basis: 22.5%;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .intro p {
+    padding: 0 9rem;
+  }
 
-    .highlight li:nth-child(2n+1) {
-      margin-left: 0;
-    }
+  main {
+    padding: 0;
+  }
 
-    .highlight li:nth-child(2n) {
-      margin-top: 3rem;
-    }
+  .highlight {
+    flex-direction: row;
+    gap: 2%;
+    justify-content: space-between;
+  }
 
-    .pricing-plan-container {
-      flex-flow: row wrap;
-      justify-content: center;
-    }
+  .highlight li {
+    flex-basis: 22.5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .pricing-plan-container h2 {
-      flex-basis: 100%;
-      font-size: 2rem;
-    }
+  .highlight li:nth-child(2n+1) {
+    margin-left: 0;
+  }
 
-    .pricing-plan-container > p {
-      flex-basis: 100%;
-      padding: 0 15rem;
-      margin-bottom: 7.3125rem;
-    }
+  .highlight li:nth-child(2n) {
+    margin-top: 3rem;
+  }
 
-    .pricing-plan-item {
-      margin: 0;
-      flex-basis: 40%;
-    }
+  .pricing-plan-container {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 
-    .item-1 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
+  .pricing-plan-container h2 {
+    flex-basis: 100%;
+    font-size: 2rem;
+  }
 
-    label {
-      font-size: 2rem;
-    }
+  .pricing-plan-container > p {
+    flex-basis: 100%;
+    padding: 0 15rem;
+    margin-bottom: 7.3125rem;
+  }
 
-    input {
-      flex-basis: 30%;
-    }
+  .pricing-plan-item {
+    margin: 0;
+    flex-basis: 40%;
+  }
+
+  .item-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 2rem;
   }
 }
 
