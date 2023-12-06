@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
   <script src="script.js" defer></script>
@@ -33,7 +35,7 @@
     </section>
 
     <ul role="list" class="highlight flex flex-column">
-      <li>
+      <li class="flex flex-column">
         <div class="decoration">
           <img src="./assets/illustration-passions.svg" alt="">
         </div>
@@ -44,7 +46,7 @@
         </div>
       </li>
 
-      <li>
+      <li class="flex flex-column">
         <div class="decoration">
           <img src="./assets/illustration-financial-freedom.svg" alt="">
         </div>
@@ -55,7 +57,7 @@
         </div>
       </li>
 
-      <li>
+      <li class="flex flex-column">
         <div class="decoration">
           <img src="./assets/illustration-lifestyle.svg" alt="">
         </div>
@@ -66,7 +68,7 @@
         </div>
       </li>
 
-      <li>
+      <li class="flex flex-column">
         <div class="decoration">
           <img src="./assets/illustration-work-anywhere.svg" alt="">
         </div>
@@ -78,18 +80,19 @@
       </li>
     </ul>
 
-    <section class="pricing-plan-container">
+    <section class="pricing-plan-container flex flex-column">
       <h2>Our pricing plans</h2>
       <p class="text">
         We only make money when our creators make money. Our plans are always affordable, and 
         it’s completely free to get started.
       </p>
 
-      <section class="pricing-plan-item item-1">
+      <section class="pricing-plan-item item-1 flex flex-column">
         <img src="./assets/icon-free.svg" alt="">
         <h3>Dip your toe</h3>
         <p class="text">Just getting started? No problem at all! Our free plan will take you a long way.</p>
         <p class="price">Free</p>
+
         <ul role="list" class="benefits-container">
           <li class="benefit">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>
@@ -110,11 +113,12 @@
         </ul>
       </section>
 
-      <section class="pricing-plan-item item-2">
+      <section class="pricing-plan-item item-2 flex flex-column">
         <img src="./assets/icon-paid.svg" alt="">
         <h3>Dive right in</h3>
         <p class="text">Ready for the big time? Our paid plan will help you take your business to the next level.</p>
-        <p class="price">$25.00 <span class="text">/ month</span></p>
+        <p class="price flex">$25.00 <span class="text">/ month</span></p>
+
         <ul role="list" class="benefits-container">
           <li class="benefit">
             <img src="./assets/icon-check.svg" alt="">
