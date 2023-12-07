@@ -45,4 +45,3 @@ Users should be able to:
 
 - Website - [Thu Nguyen](https://github.com/NgocMinhThuNguyen)
 - Frontend Mentor - [@Thu Nguyen](https://www.frontendmentor.io/profile/NgocMinhThuNguyen)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
